@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="WhisperTranslate.Mobile.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+
+    <VerticalStackLayout VerticalOptions="Center">
+        <Picker x:Name="Picker" HorizontalOptions="Center">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>English</x:String>
+                    <x:String>Dutch</x:String>
+                    <x:String>French</x:String>
+                    <x:String>Spanish</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Button
+            x:Name="btnStartRec"
+            Clicked="Start_Clicked"
+            HorizontalOptions="Center"
+            Text="Start" />
+
+        <Button
+            x:Name="btnStopRec"
+            Clicked="Stop_Clicked"
+            HorizontalOptions="Center"
+            IsVisible="false"
+            Text="Stop" />
+
+        <Label x:Name="lblStatus" HorizontalOptions="Center" />
+
+        <Button
+            x:Name="btnTranslate"
+            Clicked="Translate_Clicked"
+            HorizontalOptions="Center"
+            IsVisible="False"
+            Text="Translate"
+            VerticalOptions="Center" />
+
+        <Label x:Name="lblResult" HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+
+</ContentPage>
